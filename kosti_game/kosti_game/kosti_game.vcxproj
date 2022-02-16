@@ -139,7 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Human.cpp" />
+    <ClCompile Include="Kost.cpp" />
     <ClCompile Include="kosti_game.cpp" />
+    <ClCompile Include="Kost_A.cpp" />
+    <ClCompile Include="Kost_B.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Human.h" />
+    <ClInclude Include="Kost.h" />
+    <ClInclude Include="Kost_A.h" />
+    <ClInclude Include="Kost_B.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
