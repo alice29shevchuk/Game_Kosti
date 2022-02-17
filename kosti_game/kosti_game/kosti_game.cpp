@@ -1,8 +1,5 @@
 ﻿#include <iostream>
-#include"Kost.h"
-#include"Kost_A.h"
-#include"Kost_B.h"
-#include"Human.h"
+#include"c_Game.h"
 int main()
 {
     srand(time(0));
@@ -11,63 +8,23 @@ int main()
     Kost_B b;
     Human h;
     char c;
+    int v;
+    c_Game game;
     cout << "\t\t\t\t\t\t\tИГРА С БОТОМ!\n";
     do
     {
-        cout << "Выберите кость A или B: ";
-        cin >> c;
-        if (c == 'A' || c == 'a')
+        cout << "Menu\n";
+        cout << "1 - Vibros\n";
+        cout << "Enter vour kost: ";
+        cin >> v;
+        switch (v)
         {
-            cout << "У вас выпало: ";
-            h.Print(a);
-            cout << "\nБот выкинул: ";
-            b.Print();
-            cout << "\n";
-            if (a.getA() > b.getB())
-            {
-                cout << "Вы выиграли!\n";
-                system("pause");
-                system("cls");
-            }
-            else if (a.getA() < b.getB())
-            {
-                cout << "Вы проиграли!\n";
-                system("pause");
-                system("cls");
-            }
-            else
-            {
-                cout << "Ничья!\n";
-                system("pause");
-                system("cls");
-            }
+        case 1:
+            system("cls");
+            game.Brosok('A');
+            system("pause");
+            system("cls");
+            break;
         }
-        else
-        {
-            cout << "У вас выпало: ";
-            h.Print(b);
-            cout << "\nБот выкинул: ";
-            a.Print();
-            cout << "\n";
-            if (b.getB() > a.getA())
-            {
-                cout << "Вы выиграли!\n";
-                system("pause");
-                system("cls");
-            }
-            else if (b.getB() < a.getA())
-            {
-                cout << "Вы проиграли!\n";
-                system("pause");
-                system("cls");
-            }
-            else
-            {
-                cout << "Ничья!\n";
-                system("pause");
-                system("cls");
-            }
-        }
-    } while (c != 0);
+    } while (v != 0);
 }
-

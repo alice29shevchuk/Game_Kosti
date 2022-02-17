@@ -4,9 +4,9 @@
 class Human
 {
 public:
-	void Print(Kost &k)
+	void Print(Kost *k)
 	{
-		k.Print();
+		k->Print();
 	}
 };
 
